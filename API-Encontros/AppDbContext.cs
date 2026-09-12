@@ -8,16 +8,15 @@ namespace API_Encontros
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
+
         public DbSet<Encontro> Encontros { get; set; }
         public DbSet<Clube> Clubes { get; set; }
-        public DbSet<LivroClube> LivroClubes { get; set; } 
-
+        public DbSet<LivroClube> LivroClubes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Encontro>(entity =>
             {
-
                 entity.ToTable("encontros");
 
                 entity.Property(e => e.id).HasColumnName("id");
@@ -34,6 +33,14 @@ namespace API_Encontros
                 entity.Property(e => e.situacao)
                       .HasColumnName("situacao")
                       .HasConversion<string>();
+
+                entity.HasOne(e => e.Clube)
+                      .WithMany()
+                      .HasForeignKey(e => e.clube_id);
+
+                entity.HasOne(e => e.LivroClube)
+                      .WithMany()
+                      .HasForeignKey(e => e.livro_clube_id);
             });
 
             modelBuilder.Entity<Clube>(entity =>
