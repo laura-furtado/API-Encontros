@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API_Encontros.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_Encontros
 {

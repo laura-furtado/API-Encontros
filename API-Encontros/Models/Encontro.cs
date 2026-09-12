@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection.Metadata.Ecma335;
 
-namespace API_Encontros
+namespace API_Encontros.Models
 {
     public class Encontro
     {

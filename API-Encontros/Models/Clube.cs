@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace API_Encontros
+namespace API_Encontros.Models
 {
     public class Clube
     {
