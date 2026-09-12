@@ -24,7 +24,7 @@ namespace API_Encontros
         public Clube Clube { get; set; }
 
         public Guid? livro_clube_id { get; set; } 
-        public LivroClube? Livro { get; set; }
+        public LivroClube? LivroClube { get; set; }
     }
     public enum situacao {
         AGENDADO,
