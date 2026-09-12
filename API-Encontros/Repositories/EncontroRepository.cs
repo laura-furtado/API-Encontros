@@ -74,7 +74,7 @@ namespace API_Encontros.Repositories
 
         public async Task<bool> LivroClubePertenceAoClubeAsync(Guid livroClubeId, Guid clubeId)
         {
-            return await _context.LivrosClubes
+            return await _context.LivroClubes
                 .AnyAsync(lc => lc.id == livroClubeId && lc.clube_id == clubeId);
         }
 

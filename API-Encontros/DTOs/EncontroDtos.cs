@@ -13,7 +13,7 @@ namespace API_Encontros.DTOs
 
         [Required]
         [StringLength(150)]
-        public string titulo { get; set; }
+        public string titulo { get; set; } = string.Empty;
 
         public string? descricao { get; set; }
 
@@ -33,7 +33,7 @@ namespace API_Encontros.DTOs
 
         [Required]
         [StringLength(150)]
-        public string titulo { get; set; }
+        public string titulo { get; set; } = string.Empty;
 
         public string? descricao { get; set; }
 
@@ -59,12 +59,12 @@ namespace API_Encontros.DTOs
         public Guid id { get; set; }
         public Guid clube_id { get; set; }
         public Guid? livro_clube_id { get; set; }
-        public string titulo { get; set; }
         public string? descricao { get; set; }
         public DateTime data_hora { get; set; }
         public string? local { get; set; }
         public string? link_encontro { get; set; }
-        public string situacao { get; set; }
+        public string titulo { get; set; } = string.Empty;
+        public string situacao { get; set; } = string.Empty;
         public DateTime criado_em { get; set; }
         public DateTime atualizado_em { get; set; }
     }

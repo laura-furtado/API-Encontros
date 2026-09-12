@@ -10,7 +10,7 @@ namespace API_Encontros
         }
         public DbSet<Encontro> Encontros { get; set; }
         public DbSet<Clube> Clubes { get; set; }
-        public DbSet<LivroClube> LivroClubes { get; set; }
+        public DbSet<LivroClube> LivroClubes { get; set; } 
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

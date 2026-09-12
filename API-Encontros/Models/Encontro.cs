@@ -8,7 +8,7 @@ namespace API_Encontros.Models
         [Key]
         public Guid id { get; set; }
         [Required]
-        public string titulo { get; set; }
+        public string titulo { get; set; } = string.Empty;
         public string? descricao { get; set; }
         [Required]
         public DateTime data_hora { get; set; }
@@ -21,8 +21,7 @@ namespace API_Encontros.Models
         public DateTime atualizado_em { get; set; }
         [Required]
         public Guid clube_id { get; set; }
-        public Clube Clube { get; set; }
-
+        public Clube Clube { get; set; } = null!;
         public Guid? livro_clube_id { get; set; } 
         public LivroClube? LivroClube { get; set; }
     }
